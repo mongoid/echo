@@ -1,0 +1,18 @@
+defaults: &defaults
+  host: localhost
+  preload_models: false
+
+development:
+  <<: *defaults
+  database: echo_dev
+
+test:
+  <<: *defaults
+  database: echo_test
+
+production:
+  host: <%= ENV["MONGOID_HOST"] %>
+  port: <%= ENV["MONGOID_PORT"] %>
+  username: <%= ENV["MONGOID_USERNAME"] %>
+  password: <%= ENV["MONGOID_PASSWORD"] %>
+  database: <%= ENV["MONGOID_DATABASE"] %>

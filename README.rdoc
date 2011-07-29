@@ -1,0 +1,11 @@
+= Echo
+
+= Development Environment Setup
+
+* $ brew install mongodb
+* $ gem install bundler
+* $ bundle install
+
+= Running Specs
+
+* $ rake

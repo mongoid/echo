@@ -1,0 +1,147 @@
+GIT
+  remote: git@github.com:mongoid/mongoid.git
+  revision: 91334109819caf253ab413d340d4d260ff6fd76d
+  branch: remove-slave-support
+  specs:
+    mongoid (2.0.2)
+      activemodel (~> 3.0)
+      mongo (~> 1.3)
+      tzinfo (~> 0.3.22)
+
+GIT
+  remote: git@github.com:rails/rails.git
+  revision: a921cab621cb6932f6e88979f7c6650d3c5952b2
+  specs:
+    actionmailer (3.1.0.beta1)
+      actionpack (= 3.1.0.beta1)
+      mail (~> 2.3.0)
+    actionpack (3.1.0.beta1)
+      activemodel (= 3.1.0.beta1)
+      activesupport (= 3.1.0.beta1)
+      builder (~> 3.0.0)
+      erubis (~> 2.7.0)
+      i18n (~> 0.6.0beta1)
+      rack (~> 1.3.0.beta)
+      rack-cache (~> 1.0.1)
+      rack-mount (~> 0.8.1)
+      rack-test (~> 0.6.0)
+      sprockets (~> 2.0.0.beta.3)
+      tzinfo (~> 0.3.27)
+    activemodel (3.1.0.beta1)
+      activesupport (= 3.1.0.beta1)
+      bcrypt-ruby (~> 2.1.4)
+      builder (~> 3.0.0)
+      i18n (~> 0.6.0beta1)
+    activerecord (3.1.0.beta1)
+      activemodel (= 3.1.0.beta1)
+      activesupport (= 3.1.0.beta1)
+      arel (~> 2.1.1)
+      tzinfo (~> 0.3.27)
+    activeresource (3.1.0.beta1)
+      activemodel (= 3.1.0.beta1)
+      activesupport (= 3.1.0.beta1)
+    activesupport (3.1.0.beta1)
+      multi_json (~> 1.0)
+    rails (3.1.0.beta1)
+      actionmailer (= 3.1.0.beta1)
+      actionpack (= 3.1.0.beta1)
+      activerecord (= 3.1.0.beta1)
+      activeresource (= 3.1.0.beta1)
+      activesupport (= 3.1.0.beta1)
+      bundler (~> 1.0)
+      railties (= 3.1.0.beta1)
+    railties (3.1.0.beta1)
+      actionpack (= 3.1.0.beta1)
+      activesupport (= 3.1.0.beta1)
+      rack-ssl (~> 1.3.2)
+      rake (>= 0.8.7)
+      thor (~> 0.14.6)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    arel (2.1.1)
+    bcrypt-ruby (2.1.4)
+    bson (1.3.1)
+    bson_ext (1.3.1)
+    builder (3.0.0)
+    carrierwave (0.5.4)
+      activesupport (~> 3.0)
+    decent_exposure (1.0.1)
+    diff-lcs (1.1.2)
+    erubis (2.7.0)
+    fabrication (0.9.5)
+    haml (3.1.1)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
+    hike (1.0.0)
+    i18n (0.6.0beta1)
+    kgio (2.4.0)
+    mail (2.3.0)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.16)
+    mocha (0.9.12)
+    mongo (1.3.1)
+      bson (>= 1.3.1)
+    multi_json (1.0.2)
+    polyglot (0.3.1)
+    rack (1.3.0.beta)
+    rack-cache (1.0.2)
+      rack (>= 0.4)
+    rack-mount (0.8.1)
+      rack (>= 1.0.0)
+    rack-ssl (1.3.2)
+      rack
+    rack-test (0.6.0)
+      rack (>= 1.0)
+    rake (0.8.7)
+    rspec (2.6.0)
+      rspec-core (~> 2.6.0)
+      rspec-expectations (~> 2.6.0)
+      rspec-mocks (~> 2.6.0)
+    rspec-core (2.6.0)
+    rspec-expectations (2.6.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.6.0)
+    rspec-rails (2.6.0)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      railties (~> 3.0)
+      rspec (~> 2.6.0)
+    sass (3.1.1)
+    sprockets (2.0.0.beta.4)
+      hike (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.0)
+    thor (0.14.6)
+    tilt (1.3)
+    treetop (1.4.9)
+      polyglot (>= 0.3.1)
+    tzinfo (0.3.27)
+    unicorn (3.6.2)
+      kgio (~> 2.3)
+      rack
+    watchr (0.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bson_ext
+  bundler
+  carrierwave
+  decent_exposure
+  fabrication
+  haml-rails
+  mocha
+  mongoid!
+  rails!
+  rspec-rails
+  sass
+  unicorn
+  watchr

@@ -1,0 +1,6 @@
+# Translations should be kept in alphabetical order by key,
+# grouped by the views the translations appear in.
+de:
+  echo:
+    start:
+      title: Start
