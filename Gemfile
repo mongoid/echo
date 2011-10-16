@@ -22,5 +22,6 @@ group :development, :test do
   gem "fabrication"
   gem "mocha"
   gem "rspec-rails"
+  gem "spork", "~> 0.9.0.rc"
   gem "watchr"
 end

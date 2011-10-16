@@ -9,3 +9,8 @@
 = Running Specs
 
 * $ rake
+
+= Running Specs with Watchr and Spork:
+
+* $ spork
+* $ bundle exec watchr .watchr

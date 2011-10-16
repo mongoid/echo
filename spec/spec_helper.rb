@@ -1,26 +1,33 @@
-# This file is copied to spec/ when you run "rails generate rspec:install"
+require "rubygems"
+require "spork"
+
 ENV["RAILS_ENV"] ||= "test"
-require File.expand_path("../../config/environment", __FILE__)
-require "rspec/rails"
 
-# Requires supporting ruby files with custom matchers and macros, etc,
-# in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+Spork.prefork do
+  require File.expand_path("../../config/environment", __FILE__)
+  require "rspec/rails"
 
-RSpec.configure do |config|
-  config.mock_with :mocha
+  # Requires supporting ruby files with custom matchers and macros, etc,
+  # in spec/support/ and its subdirectories.
+  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+end
 
-  # Clean up all collections before each spec runs.
-  config.before do
-    Mongoid.purge!
-  end
+Spork.each_run do
+  RSpec.configure do |config|
+    config.mock_with :mocha
 
-  # This filter is here to stub out the Facebook and Twitter services
-  # conveniently for each spec tagged with :following.
-  config.filter_run_including(service: ->(value) {
-    if value == :following
-      FollowingObserver.any_instance.stubs(:after_create)
+    # Clean up all collections before each spec runs.
+    config.before do
+      Mongoid.purge!
     end
-    return true
-  })
+
+    # This filter is here to stub out the Facebook and Twitter services
+    # conveniently for each spec tagged with :following.
+    config.filter_run_including(service: ->(value) {
+      if value == :following
+        FollowingObserver.any_instance.stubs(:after_create)
+      end
+      return true
+    })
+  end
 end
