@@ -3,4 +3,6 @@
   %head
     %title
       = yield(:title)
+    = javascript_include_tag "application"
   %body
+    = yield

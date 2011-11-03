@@ -11,6 +11,9 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 module Echo
   class Application < Rails::Application
 
+    # Enable the asset pipeline.
+    config.assets.enabled = true
+
     # Add additional load paths for your own custom dirs.
     config.autoload_paths += %W(#{config.root}/app/services)
 
