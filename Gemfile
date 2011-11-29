@@ -11,6 +11,7 @@ gem "haml"
 gem "jquery-rails"
 gem "mongoid"
 gem "unicorn"
+gem "simple_form"
 
 group :assets do
   gem "sass-rails", "~> 3.1"
