@@ -16,11 +16,6 @@ Spork.each_run do
   RSpec.configure do |config|
     config.mock_with :mocha
 
-    # Clean up all collections before each spec runs.
-    config.before do
-      Mongoid.purge!
-    end
-
     # This filter is here to stub out the Facebook and Twitter services
     # conveniently for each spec tagged with :following.
     config.filter_run_including(service: ->(value) {
@@ -29,5 +24,18 @@ Spork.each_run do
       end
       return true
     })
+
+    config.before(:suite) do
+      DatabaseCleaner.strategy = :truncation
+      DatabaseCleaner.orm = "mongoid"
+    end
+
+    config.before(:each) do
+      DatabaseCleaner.start
+    end
+
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
   end
 end
