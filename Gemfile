@@ -12,6 +12,7 @@ gem "jquery-rails"
 gem "mongoid"
 gem "unicorn"
 gem "simple_form"
+gem "inherited_resources"
 
 group :assets do
   gem "sass-rails", "~> 3.1"
