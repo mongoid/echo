@@ -9,7 +9,7 @@ gem "carrierwave-mongoid", require: "carrierwave/mongoid"
 gem "decent_exposure"
 gem "haml"
 gem "jquery-rails"
-gem "mongoid", git: "git://github.com/mongoid/mongoid.git"
+gem "mongoid"
 gem "unicorn"
 
 group :assets do
