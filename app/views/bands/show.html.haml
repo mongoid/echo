@@ -10,6 +10,10 @@
   %p.location Located in #{@band.location}.
   %p.website Visit #{link_to @band.website, @band.website}.
 
+.tours
+  %h2 Tours
+  = link_to "Tours", band_tours_path(@band)
+
 = link_to 'Edit', edit_band_path(@band)
 \|
 = link_to 'Back', bands_path
