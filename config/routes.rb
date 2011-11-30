@@ -50,7 +50,9 @@ Echo::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => "start#index"
 
-  resources :bands
+  resources :bands do
+    resources :tours
+  end
 
   # See how all your routes lay out with "rake routes"
 
