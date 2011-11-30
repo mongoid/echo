@@ -3,6 +3,10 @@
 
 %p#notice= notice
 
+.shows
+  %h2 Shows
+  = link_to "Shows", band_tour_shows_path(@band, @tour)
+
 = link_to 'Edit', edit_band_tour_path(@band, @tour)
 \|
 = link_to 'Back', band_tours_path(@band)

@@ -51,7 +51,9 @@ Echo::Application.routes.draw do
   root :to => "start#index"
 
   resources :bands do
-    resources :tours
+    resources :tours do
+      resources :shows
+    end
   end
 
   # See how all your routes lay out with "rake routes"

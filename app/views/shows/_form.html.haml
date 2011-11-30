@@ -1,0 +1,8 @@
+= simple_form_for([@band, @tour, @show]) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :date
+
+  .actions
+    = f.button :submit

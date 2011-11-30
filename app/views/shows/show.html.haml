@@ -1,0 +1,8 @@
+- content_for(:title) do
+  Show on #{@show.date} of #{@show.tour.name}
+
+%p#notice= notice
+
+= link_to 'Edit', edit_band_tour_show_path(@band, @tour, @show)
+\|
+= link_to 'Back', band_tour_shows_path(@band, @tour)
