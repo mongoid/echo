@@ -1,0 +1,15 @@
+- content_for(:title) do
+  Show #{@band.name}
+
+%p#notice= notice
+
+.bio
+  %h2 Bio
+  %p.description #{@band.description}
+  %p.formed_on Formed on #{@band.formed_on}.
+  %p.location Located in #{@band.location}.
+  %p.website Visit #{link_to @band.website, @band.website}.
+
+= link_to 'Edit', edit_band_path(@band)
+\|
+= link_to 'Back', bands_path

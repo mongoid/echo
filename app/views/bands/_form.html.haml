@@ -1,0 +1,13 @@
+= simple_form_for(@band) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :name
+
+    = f.input :description
+    = f.input :formed_on
+    = f.input :location
+    = f.input :website
+
+  .actions
+    = f.button :submit
