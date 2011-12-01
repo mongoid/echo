@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "Shows" do
   describe "GET /bands/1/tours/2/shows" do
     describe "listing of shows" do
-      let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show)])]) }
+      let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show, venue: Fabricate.build(:venue))])]) }
       let(:tour) { band.tours.first }
       let(:show) { tour.shows.first }
 
@@ -14,6 +14,10 @@ describe "Shows" do
 
       it "name" do
         page.should have_link show.date.to_s, href: band_tour_show_path(band, tour, show)
+      end
+
+      it "venue name" do
+        page.should have_content show.venue.name
       end
 
       it "edit and destroy links" do
@@ -34,21 +38,33 @@ describe "Shows" do
 
     it "shows form" do
       page.should have_field "Date"
+
+      within_fieldset("Venue") do
+        page.should have_field "Name"
+      end
     end
 
     it "creates show" do
       fill_in "Date", with: "25.12.2010"
+
+      within_fieldset("Venue") do
+        fill_in "Name", with: "Olympiastadium"
+      end
 
       click_button "Create Show"
 
       page.should have_content "Show was successfully created."
 
       page.should have_content "2010-12-25"
+
+      within(".venue") do
+        page.should have_content "Olympiastadium"
+      end
     end
   end
 
   describe "GET /bands/1/tours/2/shows/2" do
-    let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show)])]) }
+    let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show, venue: Fabricate.build(:venue))])]) }
     let(:tour) { band.tours.first }
     let(:show) { tour.shows.first }
 
@@ -60,10 +76,14 @@ describe "Shows" do
     it "date" do
       page.should have_content show.date.to_s
     end
+
+    it "venue name" do
+      page.should have_content show.venue.name
+    end
   end
 
   describe "GET /bands/1/tours/2/shows/2/edit" do
-    let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show)])]) }
+    let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show, venue: Fabricate.build(:venue))])]) }
     let(:tour) { band.tours.first }
     let(:show) { tour.shows.first }
 
@@ -74,6 +94,10 @@ describe "Shows" do
 
     it "shows current data in form" do
       page.should have_field "Date", with: show.date.to_s
+
+      within_fieldset("Venue") do
+        page.should have_field "Name", with: show.venue.name
+      end
     end
 
     describe "edit fields" do
@@ -85,11 +109,24 @@ describe "Shows" do
 
         page.should have_content "2010-12-25"
       end
+
+      it "date" do
+        within_fieldset("Venue") do
+          fill_in "Name", with: "Olympiastadium"
+        end
+
+        click_button "Update Show"
+        page.should have_content "Show was successfully updated."
+
+        within(".venue") do
+          page.should have_content "Olympiastadium"
+        end
+      end
     end
   end
 
   describe "GET /bands/1/tours/2/shows/2/destroy" do
-    let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show)])]) }
+    let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show, venue: Fabricate.build(:venue))])]) }
     let(:tour) { band.tours.first }
     let(:show) { tour.shows.first }
 
