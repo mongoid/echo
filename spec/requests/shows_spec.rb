@@ -48,7 +48,7 @@ describe "Shows" do
       fill_in "Date", with: "25.12.2010"
 
       within_fieldset("Venue") do
-        fill_in "Name", with: "Olympiastadium"
+        fill_in "Name", with: "Olympiastadion"
       end
 
       click_button "Create Show"
@@ -58,12 +58,12 @@ describe "Shows" do
       page.should have_content "2010-12-25"
 
       within(".venue") do
-        page.should have_content "Olympiastadium"
+        page.should have_content "Olympiastadion"
       end
     end
   end
 
-  describe "GET /bands/1/tours/2/shows/2" do
+  describe "GET /bands/1/tours/2/shows/3" do
     let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show, venue: Fabricate.build(:venue))])]) }
     let(:tour) { band.tours.first }
     let(:show) { tour.shows.first }
@@ -78,11 +78,13 @@ describe "Shows" do
     end
 
     it "venue name" do
-      page.should have_content show.venue.name
+      within(".venue") do
+        page.should have_content show.venue.name
+      end
     end
   end
 
-  describe "GET /bands/1/tours/2/shows/2/edit" do
+  describe "GET /bands/1/tours/2/shows/3/edit" do
     let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show, venue: Fabricate.build(:venue))])]) }
     let(:tour) { band.tours.first }
     let(:show) { tour.shows.first }
@@ -112,20 +114,20 @@ describe "Shows" do
 
       it "date" do
         within_fieldset("Venue") do
-          fill_in "Name", with: "Olympiastadium"
+          fill_in "Name", with: "Olympiastadion"
         end
 
         click_button "Update Show"
         page.should have_content "Show was successfully updated."
 
         within(".venue") do
-          page.should have_content "Olympiastadium"
+          page.should have_content "Olympiastadion"
         end
       end
     end
   end
 
-  describe "GET /bands/1/tours/2/shows/2/destroy" do
+  describe "GET /bands/1/tours/2/shows/3/destroy" do
     let!(:band) { Fabricate(:nine_inch_nails, tours: [Fabricate.build(:tour, shows: [Fabricate.build(:show, venue: Fabricate.build(:venue))])]) }
     let(:tour) { band.tours.first }
     let(:show) { tour.shows.first }
