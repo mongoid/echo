@@ -1,0 +1,22 @@
+- content_for(:title) do
+  Listing shows
+
+%table
+  %tr
+    %th Date
+    %th Venue
+    %th City
+    %th
+    %th
+
+  - @shows.each do |show|
+    %tr
+      %td= link_to show.date, [@band, @tour, show]
+      %td= show.venue.name
+      %td= show.venue.address.city
+      %td= link_to 'Edit', edit_band_tour_show_path(@band, @tour, show)
+      %td= link_to 'Destroy', [@band, @tour, show], :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Show', new_band_tour_show_path(@band, @tour)

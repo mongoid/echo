@@ -1,0 +1,25 @@
+- content_for(:title) do
+  Show on #{@show.date} of #{@show.tour.name}
+
+%p#notice= notice
+
+.venue
+  %h2 Venue
+  %p Name: #{@show.venue.name}
+
+  .address{itemscope: true, itemtype: "http://data-vocabulary.org/Address"}
+    %h3 Address
+    %span #{@show.venue.address.extra}
+    %br
+    %span{itemprop: "street-address"} #{@show.venue.address.street}
+    %br
+    %span{itemprop: "postal-code"} #{@show.venue.address.postcode}
+    %span{itemprop: "locality"} #{@show.venue.address.city}
+    %br
+    %span{itemprop: "region"} #{@show.venue.address.state}
+    %br
+    %span{itemprop: "country-name"} #{@show.venue.address.country}
+
+= link_to 'Edit', edit_band_tour_show_path(@band, @tour, @show)
+\|
+= link_to 'Back', band_tour_shows_path(@band, @tour)

@@ -1,0 +1,18 @@
+- content_for(:title) do
+  Listing tours of #{@band.name}
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+
+  - @tours.each do |tour|
+    %tr
+      %td= link_to tour.name, [@band, tour]
+      %td= link_to 'Edit', edit_band_tour_path(@band, tour)
+      %td= link_to 'Destroy', [@band, tour], :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Tour', new_band_tour_path(@band)

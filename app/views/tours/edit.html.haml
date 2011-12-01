@@ -1,0 +1,8 @@
+- content_for(:title) do
+  Editing tour
+
+= render 'form'
+
+= link_to 'Show', [@band, @tour]
+\|
+= link_to 'Back', band_tours_path(@band)
