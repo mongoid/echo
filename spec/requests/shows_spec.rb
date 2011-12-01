@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'spec_helper'
 
 describe "Shows" do
@@ -112,7 +113,7 @@ describe "Shows" do
         page.should have_content "2010-12-25"
       end
 
-      it "date" do
+      it "venue name" do
         within_fieldset("Venue") do
           fill_in "Name", with: "Olympiastadion"
         end
