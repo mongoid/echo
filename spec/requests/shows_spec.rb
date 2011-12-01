@@ -21,6 +21,10 @@ describe "Shows" do
         page.should have_content show.venue.name
       end
 
+      it "city" do
+        page.should have_content show.venue.address.city
+      end
+
       it "edit and destroy links" do
         page.should have_link "Edit", href: edit_band_tour_show_path(band, tour, show)
         page.should have_link "Destroy", href: band_tour_show_path(band, tour, show)
@@ -45,21 +49,63 @@ describe "Shows" do
       end
     end
 
-    it "creates show" do
-      fill_in "Date", with: "25.12.2010"
+    describe "creates show" do
+      it "date" do
+        fill_in "Date", with: "25.12.2010"
 
-      within_fieldset("Venue") do
-        fill_in "Name", with: "Olympiastadion"
+        click_button "Create Show"
+
+        page.should have_content "Show was successfully created."
+
+        page.should have_content "2010-12-25"
       end
 
-      click_button "Create Show"
+      it "venue name" do
+        fill_in "Date", with: "25.12.2010"
 
-      page.should have_content "Show was successfully created."
+        within_fieldset("Venue") do
+          fill_in "Name", with: "Olympiastadion"
+        end
 
-      page.should have_content "2010-12-25"
+        click_button "Create Show"
 
-      within(".venue") do
-        page.should have_content "Olympiastadion"
+        page.should have_content "Show was successfully created."
+
+        page.should have_content "2010-12-25"
+
+        within(".venue") do
+          page.should have_content "Olympiastadion"
+        end
+      end
+
+      it "venue address" do
+        fill_in "Date", with: "25.12.2010"
+
+        within_fieldset("Venue") do
+          fill_in "Name", with: "Olympiastadion"
+
+          fill_in "Street", with: "Spiridon-Louis-Ring 21"
+          fill_in "Postcode", with: "80809"
+          fill_in "City", with: "München"
+          fill_in "State", with: "Bayern"
+          fill_in "Country", with: "Deutschland"
+        end
+
+        click_button "Create Show"
+
+        page.should have_content "Show was successfully created."
+
+        page.should have_content "2010-12-25"
+
+        within(".venue") do
+          page.should have_content "Olympiastadion"
+
+          page.should have_content "Spiridon-Louis-Ring 21"
+          page.should have_content "80809"
+          page.should have_content "München"
+          page.should have_content "Bayern"
+          page.should have_content "Deutschland"
+        end
       end
     end
   end
@@ -81,6 +127,17 @@ describe "Shows" do
     it "venue name" do
       within(".venue") do
         page.should have_content show.venue.name
+      end
+    end
+
+    it "venue address" do
+      within(".venue") do
+        page.should have_content show.venue.address.extra
+        page.should have_content show.venue.address.street
+        page.should have_content show.venue.address.postcode
+        page.should have_content show.venue.address.city
+        page.should have_content show.venue.address.state
+        page.should have_content show.venue.address.country
       end
     end
   end
@@ -123,6 +180,27 @@ describe "Shows" do
 
         within(".venue") do
           page.should have_content "Olympiastadion"
+        end
+      end
+
+      it "venue address" do
+        within_fieldset("Venue") do
+          fill_in "Street", with: "Spiridon-Louis-Ring 21"
+          fill_in "Postcode", with: "80809"
+          fill_in "City", with: "München"
+          fill_in "State", with: "Bayern"
+          fill_in "Country", with: "Deutschland"
+        end
+
+        click_button "Update Show"
+        page.should have_content "Show was successfully updated."
+
+        within(".venue") do
+          page.should have_content "Spiridon-Louis-Ring 21"
+          page.should have_content "80809"
+          page.should have_content "München"
+          page.should have_content "Bayern"
+          page.should have_content "Deutschland"
         end
       end
     end

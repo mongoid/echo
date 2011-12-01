@@ -6,6 +6,13 @@
     = field_set_tag "Venue" do
       = f.simple_fields_for :venue, @show.venue || Venue.new do |venue|
         = venue.input :name
+        = venue.simple_fields_for :address, (@show.venue && @show.venue.address) || Address.new do |address|
+          = address.input :extra
+          = address.input :street
+          = address.input :postcode
+          = address.input :city
+          = address.input :state
+          = address.input :country, as: :string
 
   .actions
     = f.button :submit
