@@ -1,5 +1,6 @@
 Echo
 ====
+This is the sample Rails application for Mongoid.
 
 Development Environment Setup
 =============================
