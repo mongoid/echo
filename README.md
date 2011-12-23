@@ -30,4 +30,4 @@ Environment Setup Heroku
 
 Heroku
 ======
-[Echo](http://echo-am.herokuapp.com)
+[Echo](http://echo.am)
