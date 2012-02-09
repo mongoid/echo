@@ -47,6 +47,7 @@ GEM
     carrierwave-mongoid (0.1.0)
       carrierwave
       mongoid
+    cocaine (0.2.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -85,7 +86,14 @@ GEM
       metaclass (~> 0.0.1)
     mongo (1.5.2)
       bson (= 1.5.2)
+    mongoid-paperclip (0.0.7)
+      paperclip (>= 2.3.6)
     multi_json (1.0.4)
+    paperclip (2.5.2)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.1)
@@ -166,6 +174,7 @@ DEPENDENCIES
   jquery-rails
   mocha
   mongoid!
+  mongoid-paperclip
   rails (~> 3.2)
   rspec-rails
   sass-rails (~> 3.2)
