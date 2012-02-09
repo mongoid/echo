@@ -13,15 +13,15 @@ gem "mongoid", git: "git://github.com/mongoid/mongoid.git"
 gem "unicorn"
 
 group :assets do
-  gem "sass-rails", "~> 3.1"
-  gem "coffee-rails", "~> 3.1"
+  gem "sass-rails", "~> 3.2"
+  gem "coffee-rails", "~> 3.2"
   gem "uglifier"
 end
 
 group :development, :test do
   gem "fabrication"
+  gem "guard-rspec"
   gem "mocha"
   gem "rspec-rails"
   gem "spork", "~> 0.9.0.rc"
-  gem "watchr"
 end
