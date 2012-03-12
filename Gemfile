@@ -10,7 +10,6 @@ gem "decent_exposure"
 gem "haml"
 gem "jquery-rails"
 gem "mongoid", git: "git://github.com/mongoid/mongoid.git"
-gem "mongoid-paperclip", require: "mongoid_paperclip"
 gem "unicorn"
 
 group :assets do
