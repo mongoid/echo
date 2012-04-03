@@ -1,10 +1,12 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: b4cce4179ace5c035878ea476d12c60d32d35d3e
+  revision: 91feedc1fbcfb9c0c04bdca1bcaaa832247621e5
+  branch: origin-integration
   specs:
     mongoid (3.0.0)
       activemodel (~> 3.1)
       mongo (~> 1.3)
+      origin (~> 1.0.0.beta)
       tzinfo (~> 0.3.22)
 
 GEM
@@ -85,7 +87,8 @@ GEM
       metaclass (~> 0.0.1)
     mongo (1.6.1)
       bson (~> 1.6.1)
-    multi_json (1.1.0)
+    multi_json (1.2.0)
+    origin (1.0.0.beta)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
