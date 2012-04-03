@@ -20,14 +20,5 @@ Spork.each_run do
     config.before do
       Mongoid.purge!
     end
-
-    # This filter is here to stub out the Facebook and Twitter services
-    # conveniently for each spec tagged with :following.
-    config.filter_run_including(service: ->(value) {
-      if value == :following
-        FollowingObserver.any_instance.stubs(:after_create)
-      end
-      return true
-    })
   end
 end
