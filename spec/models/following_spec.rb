@@ -31,11 +31,11 @@ describe Following do
       moses.follow(clash)
     end
 
-    pending "returns the bands ranked by number of followings", service: :following do
+    it "returns the bands ranked by number of followings", service: :following do
       Following.ranked.should ==
         [
-          { "count" => 1.0, "band_id" => dead_kennedys.id },
-          { "count" => 2.0, "band_id" => clash.id }
+          { "value" => { "followers" => 1.0 }, "_id" => dead_kennedys.id },
+          { "value" => { "followers" => 2.0 }, "_id" => clash.id }
         ]
     end
   end
