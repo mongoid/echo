@@ -21,9 +21,9 @@ class User
   # All users must have a role in order for the permissions to be effective.
   validates :role, presence: true
 
-  index "email", background: true
-  index "role.name", background: true
-  index "role.role_id", background: true
+  index email: 1, options: { background: true }
+  index "role.name" => 1, options: { background: true }
+  index "role.role_id" => 1, options: { background: true }
 
   # Convenience methods for determining if the user itself is of a specific
   # role in the application.

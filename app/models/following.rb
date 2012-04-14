@@ -16,7 +16,6 @@ class Following
     #
     # @return [ Array<Hash> ] A grouping by count and band id.
     def ranked
-      only(:band_id).limit(10).aggregate
     end
   end
 end

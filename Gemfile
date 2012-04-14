@@ -2,7 +2,6 @@ source "http://rubygems.org"
 
 gem "rails", "~> 3.2"
 
-gem "bson_ext"
 gem "bundler"
 gem "carrierwave"
 gem "carrierwave-mongoid", require: "carrierwave/mongoid"
