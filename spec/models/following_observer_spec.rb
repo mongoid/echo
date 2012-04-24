@@ -27,7 +27,7 @@ describe FollowingObserver do
       end
 
       it "tweets the following" do
-        Echo::Facebook.expects(:post_to_wall).with(following).returns(true)
+        Facebook.expects(:post_to_wall).with(following).returns(true)
         observer.after_create(following)
       end
     end
@@ -39,7 +39,7 @@ describe FollowingObserver do
       end
 
       it "posts to the users facebook wall" do
-        Echo::Twitter.expects(:tweet).with(following).returns(true)
+        Twitter.expects(:tweet).with(following).returns(true)
         observer.after_create(following)
       end
     end

@@ -9,7 +9,7 @@ class FollowingObserver < Mongoid::Observer
   #
   # @param [ Following ] following The following.
   def after_create(following)
-    Echo::Facebook.post_to_wall(following)
-    Echo::Twitter.tweet(following)
+    Facebook.post_to_wall(following)
+    Twitter.tweet(following)
   end
 end

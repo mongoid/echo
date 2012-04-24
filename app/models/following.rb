@@ -6,6 +6,8 @@ class Following
   belongs_to :band, index: true
   belongs_to :user, index: true
 
+  validates :user, presence: true
+
   class << self
 
     RANK_MAP = %Q{

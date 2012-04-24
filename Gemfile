@@ -9,7 +9,7 @@ gem "decent_exposure"
 gem "haml"
 gem "jquery-rails"
 gem "mongoid", git: "git://github.com/mongoid/mongoid.git"
-gem "unicorn"
+gem "thin"
 
 group :assets do
   gem "sass-rails", "~> 3.2"
