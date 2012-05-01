@@ -1,7 +1,6 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: f48ecd5bb63c7d664fed63e194fd9bb40e35780a
-  branch: serialization-rewrite
+  revision: cb1312e5385c1c9d142337174b904ef9c971d51b
   specs:
     mongoid (3.0.0)
       activemodel (~> 3.1)
