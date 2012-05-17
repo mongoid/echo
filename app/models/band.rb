@@ -24,10 +24,10 @@ class Band
   # be unique. Description is not required but should be filled out.
   validates :name, presence: true, uniqueness: true
 
-  index genres: 1, options: { background: true }
-  index name: 1, options: { background: true, unique: true }
-  index "albums.producer_id" => 1, options: { background: true }
-  index "tours.shows.venue" => "2d", options: { background: true }
+  index({ genres: 1 }, { background: true })
+  index({ name: 1 }, { background: true, unique: true })
+  index({ "albums.producer_id" => 1 }, { background: true })
+  index({ "tours.shows.venue" => "2d" }, { background: true })
 
   # Get all the bands that have been reviewed by the provided user.
   #

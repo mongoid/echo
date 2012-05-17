@@ -12,7 +12,7 @@ module Reference
     # every role.
     validates :name, presence: true, uniqueness: true
 
-    index name: 1, options: { background: true }
+    index({ name: 1 }, { background: true })
 
     TYPES.each do |name|
 

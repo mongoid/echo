@@ -6,7 +6,7 @@ class Metadata
 
   belongs_to :document, polymorphic: true
 
-  index tags: 1, options: { background: true }
+  index({ tags: 1 }, { background: true })
 
   # Get all application entities that match the supplied text. Will work for
   # text that is exact, on contains the text in any part of the name.
