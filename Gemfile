@@ -10,7 +10,6 @@ gem "haml"
 gem "heroku"
 gem "jquery-rails"
 gem "mongoid", git: "git://github.com/mongoid/mongoid.git"
-gem "thin"
 
 group :assets do
   gem "sass-rails", "~> 3.2"
