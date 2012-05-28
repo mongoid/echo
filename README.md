@@ -19,8 +19,8 @@ Running Specs
 
 * `$ rake`
 
-Running Specs with Watchr and Spork
+Running Specs with Guard and Spork
 -----------------------------------
 
 * `$ spork`
-* `$ bundle exec watchr .watchr`
+* `$ bundle exec guard`
