@@ -98,7 +98,7 @@ GEM
     moped (1.0.0.rc)
     multi_json (1.3.5)
     netrc (0.7.2)
-    origin (1.0.0.beta)
+    origin (1.0.0.rc)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
