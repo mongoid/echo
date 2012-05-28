@@ -24,3 +24,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "spork", "~> 0.9.0.rc"
 end
+
+platforms :jruby do
+  gem "jruby-openssl"
+end
