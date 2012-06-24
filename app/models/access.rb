@@ -5,9 +5,9 @@ class Access
 
   CATEGORIES = [ :download, :stream ]
 
-  field :album_id, type: BSON::ObjectId
+  field :album_id, type: Moped::BSON::ObjectId
   field :category, type: Symbol
-  field :track_id, type: BSON::ObjectId
+  field :track_id, type: Moped::BSON::ObjectId
 
   belongs_to :band
   belongs_to :user
