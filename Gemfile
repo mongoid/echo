@@ -9,9 +9,11 @@ gem "decent_exposure"
 gem "haml"
 gem "heroku"
 gem "jquery-rails"
+gem "kiqstand"
+gem "sidekiq"
 
 gem "evolver", github: "mongoid/evolver"
-gem "mongoid", github: "mongoid/mongoid"
+gem "mongoid"
 
 group :assets do
   gem "sass-rails", "~> 3.2"
