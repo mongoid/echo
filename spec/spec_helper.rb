@@ -14,8 +14,6 @@ end
 
 Spork.each_run do
   RSpec.configure do |config|
-    config.mock_with :mocha
-
     # Clean up all collections before each spec runs.
     config.before do
       Mongoid.purge!

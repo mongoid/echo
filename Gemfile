@@ -22,7 +22,6 @@ end
 group :development, :test do
   gem "fabrication"
   gem "guard-rspec"
-  gem "mocha"
   gem "rspec-rails"
   gem "spork", "~> 0.9.0.rc"
 end

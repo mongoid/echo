@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mongoid/evolver.git
-  revision: 25e71ef2a51d759cddd0ce2c5349c17fd256f02f
+  revision: e5910d1a8a17e24fd167b3c23064681a5b0782e0
   specs:
     evolver (0.0.0)
       mongoid (~> 3.0)
@@ -101,10 +101,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    metaclass (0.0.1)
     mime-types (1.19)
-    mocha (0.12.1)
-      metaclass (~> 0.0.1)
     moped (1.1.5)
     multi_json (1.3.6)
     netrc (0.7.5)
@@ -192,7 +189,6 @@ DEPENDENCIES
   heroku
   jquery-rails
   jruby-openssl
-  mocha
   mongoid!
   rails (~> 3.2)
   rspec-rails
