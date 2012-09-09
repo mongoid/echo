@@ -14,6 +14,8 @@ gem "sidekiq"
 
 gem "evolver", github: "mongoid/evolver"
 gem "mongoid", github: "mongoid/mongoid"
+gem "moped", github: "mongoid/moped"
+gem "origin", github: "mongoid/origin"
 
 group :assets do
   gem "sass-rails", "~> 3.2"
