@@ -69,8 +69,4 @@ test:
 production:
   sessions:
     default:
-      database: <%= ENV["MONGOID_DATABASE"] %>
-      username: <%= ENV["MONGOID_USERNAME"] %>
-      password: <%= ENV["MONGOID_PASSWORD"] %>
-      hosts:
-        - "<%= ENV["MONGOID_HOST"] %>:<%= ENV["MONGOID_PORT"] %>"
+      uri: <%= ENV["ECHO_URI"] %>
