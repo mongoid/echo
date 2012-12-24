@@ -10,7 +10,6 @@ gem "haml"
 gem "heroku"
 gem "jquery-rails"
 gem "kiqstand"
-gem "pg"
 gem "sidekiq"
 
 gem "evolver", github: "mongoid/evolver"
