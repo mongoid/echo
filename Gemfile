@@ -1,24 +1,30 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
-ruby "1.9.3"
+gem 'rails',     github: 'rails/rails'
+gem 'arel',      github: 'rails/arel'
 
-gem "rails", "~> 3.2"
-
-gem "bundler"
 gem "carrierwave"
 gem "carrierwave-mongoid", require: "carrierwave/mongoid"
 gem "decent_exposure"
-gem "haml"
-gem "jquery-rails"
-gem "kiqstand"
+
 gem "sidekiq"
 
-gem "evolver", github: "mongoid/evolver"
-gem "mongoid", "~> 3.1.1"
+#gem "evolver", github: "mongoid/evolver"
+gem "mongoid", github: "mongoid/mongoid"
+gem "kiqstand", github: "mongoid/kiqstand"
 
+#
+# Front-End Infrastructure
+#
+gem 'backbone-on-rails'
+gem 'jquery-rails'
+gem 'rack-iframe-transport'
+gem 'mimetype-fu', require: 'mimetype_fu'
+gem 'haml-rails'
 group :assets do
-  gem "sass-rails", "~> 3.2"
-  gem "coffee-rails", "~> 3.2"
+  gem 'sprockets-rails', github: 'rails/sprockets-rails'
+  gem 'sass-rails',   github: 'rails/sass-rails'
+  gem 'coffee-rails', github: 'rails/coffee-rails'
   gem "uglifier"
 end
 

@@ -1,181 +1,221 @@
 GIT
-  remote: git://github.com/mongoid/evolver.git
-  revision: f4ffcf50cd8ec5e3495b7108fffeab51e18599f6
+  remote: git://github.com/mongoid/kiqstand.git
+  revision: fdd5ea62293707fe044180a220670b0142314d04
   specs:
-    evolver (0.0.0)
-      mongoid (~> 3.0)
-      railties (~> 3.2)
+    kiqstand (1.2.0)
+      mongoid (~> 4.0)
+      moped (~> 1.4)
+
+GIT
+  remote: git://github.com/mongoid/mongoid.git
+  revision: de244e9c323d777cdf6c260e9461200ad932185b
+  specs:
+    mongoid (4.0.0)
+      activemodel (~> 4.0.0.beta)
+      moped (~> 1.4.2)
+      origin (~> 1.0)
+      tzinfo (~> 0.3.22)
+
+GIT
+  remote: git://github.com/rails/arel.git
+  revision: 933ea218116645eafaf3b7ea5695520db0f9d9ba
+  specs:
+    arel (4.0.0.beta2.20130314230643)
+
+GIT
+  remote: git://github.com/rails/coffee-rails.git
+  revision: 948fef30464235e7588e34faa513b448a00c0e6b
+  specs:
+    coffee-rails (4.0.0.beta1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0.beta, < 5.0)
+
+GIT
+  remote: git://github.com/rails/rails.git
+  revision: d716fe05dfc174af4d840258b52e690ff754c8c3
+  specs:
+    actionmailer (4.0.0.beta1)
+      actionpack (= 4.0.0.beta1)
+      mail (~> 2.5.3)
+    actionpack (4.0.0.beta1)
+      activesupport (= 4.0.0.beta1)
+      builder (~> 3.1.0)
+      erubis (~> 2.7.0)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    activemodel (4.0.0.beta1)
+      activesupport (= 4.0.0.beta1)
+      builder (~> 3.1.0)
+    activerecord (4.0.0.beta1)
+      activemodel (= 4.0.0.beta1)
+      activerecord-deprecated_finders (~> 0.0.3)
+      activesupport (= 4.0.0.beta1)
+      arel (~> 4.0.0.beta2)
+    activesupport (4.0.0.beta1)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    rails (4.0.0.beta1)
+      actionmailer (= 4.0.0.beta1)
+      actionpack (= 4.0.0.beta1)
+      activerecord (= 4.0.0.beta1)
+      activesupport (= 4.0.0.beta1)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.0.0.beta1)
+      sprockets-rails (~> 2.0.0.rc3)
+    railties (4.0.0.beta1)
+      actionpack (= 4.0.0.beta1)
+      activesupport (= 4.0.0.beta1)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+
+GIT
+  remote: git://github.com/rails/sass-rails.git
+  revision: d435679b0fe528b954a9abd0059f975d94707574
+  specs:
+    sass-rails (4.0.0.beta1)
+      railties (>= 4.0.0.beta, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0.rc0)
+      tilt (~> 1.3)
+
+GIT
+  remote: git://github.com/rails/sprockets-rails.git
+  revision: 16082178a15ce50270ec2250ad202379fa882079
+  specs:
+    sprockets-rails (2.0.0.rc3)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (~> 2.8)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
-    actionmailer (3.2.9)
-      actionpack (= 3.2.9)
-      mail (~> 2.4.4)
-    actionpack (3.2.9)
-      activemodel (= 3.2.9)
-      activesupport (= 3.2.9)
-      builder (~> 3.0.0)
-      erubis (~> 2.7.0)
-      journey (~> 1.0.4)
-      rack (~> 1.4.0)
-      rack-cache (~> 1.2)
-      rack-test (~> 0.6.1)
-      sprockets (~> 2.2.1)
-    activemodel (3.2.9)
-      activesupport (= 3.2.9)
-      builder (~> 3.0.0)
-    activerecord (3.2.9)
-      activemodel (= 3.2.9)
-      activesupport (= 3.2.9)
-      arel (~> 3.0.2)
-      tzinfo (~> 0.3.29)
-    activeresource (3.2.9)
-      activemodel (= 3.2.9)
-      activesupport (= 3.2.9)
-    activesupport (3.2.9)
-      i18n (~> 0.6)
-      multi_json (~> 1.0)
-    arel (3.0.2)
-    builder (3.0.4)
-    carrierwave (0.7.1)
+    activerecord-deprecated_finders (0.0.3)
+    atomic (1.1.6)
+    backbone-on-rails (1.0.0.0)
+      eco
+      ejs
+      jquery-rails
+      rails (>= 3.1)
+    builder (3.1.4)
+    carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
-    carrierwave-mongoid (0.3.0)
-      carrierwave (~> 0.7.1)
-      mongoid (~> 3.0)
-      mongoid-grid_fs (~> 1.3)
+    carrierwave-mongoid (0.1.0)
+      carrierwave
+      mongoid
     celluloid (0.12.4)
       facter (>= 1.6.12)
       timers (>= 1.0.0)
-    coderay (1.0.8)
-    coffee-rails (3.2.2)
-      coffee-script (>= 2.2.0)
-      railties (~> 3.2.0)
+    coderay (1.0.9)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.4.0)
-    connection_pool (0.9.3)
-    decent_exposure (2.0.1)
-    diff-lcs (1.1.3)
+    coffee-script-source (1.6.2)
+    connection_pool (1.0.0)
+    decent_exposure (2.1.0)
+    diff-lcs (1.2.2)
+    eco (1.0.0)
+      coffee-script
+      eco-source
+      execjs
+    eco-source (1.1.0.rc.1)
+    ejs (1.1.1)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    fabrication (2.5.2)
-    facter (1.6.16)
-    guard (1.6.0)
+    fabrication (2.6.4)
+    facter (1.6.18)
+    formatador (0.2.4)
+    guard (1.7.0)
+      formatador (>= 0.2.4)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
       thor (>= 0.14.6)
-    guard-rspec (2.3.3)
+    guard-rspec (2.5.2)
       guard (>= 1.1)
       rspec (~> 2.11)
-    haml (3.1.7)
-    hike (1.2.1)
-    i18n (0.6.1)
-    journey (1.0.4)
-    jquery-rails (2.1.4)
+    haml (4.0.2)
+      tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
+    hike (1.2.2)
+    i18n (0.6.4)
+    jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.7.5)
-    kiqstand (1.0.0)
-      mongoid (~> 3.0)
-      moped (~> 1.2)
-    listen (0.6.0)
-    lumberjack (1.0.2)
-    mail (2.4.4)
+    listen (0.7.3)
+    lumberjack (1.0.3)
+    mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.1)
-    mime-types (1.19)
-    mongoid (3.1.1)
-      activemodel (~> 3.2)
-      moped (~> 1.4.2)
-      origin (~> 1.0)
-      tzinfo (~> 0.3.22)
-    mongoid-grid_fs (1.7.0)
-      mime-types (~> 1.19)
-      mongoid (~> 3.0)
-    moped (1.4.2)
-    multi_json (1.6.1)
+    mime-types (1.22)
+    mimetype-fu (0.1.2)
+    minitest (4.7.1)
+    moped (1.4.5)
+    multi_json (1.7.2)
     origin (1.0.11)
     polyglot (0.3.3)
-    pry (0.9.10)
+    pry (0.9.12)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
-      slop (~> 3.3.1)
-    rack (1.4.1)
-    rack-cache (1.2)
-      rack (>= 0.4)
-    rack-ssl (1.3.2)
-      rack
+      slop (~> 3.4)
+    rack (1.5.2)
+    rack-iframe-transport (0.1.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (3.2.9)
-      actionmailer (= 3.2.9)
-      actionpack (= 3.2.9)
-      activerecord (= 3.2.9)
-      activeresource (= 3.2.9)
-      activesupport (= 3.2.9)
-      bundler (~> 1.0)
-      railties (= 3.2.9)
-    railties (3.2.9)
-      actionpack (= 3.2.9)
-      activesupport (= 3.2.9)
-      rack-ssl (~> 1.3.2)
-      rake (>= 0.8.7)
-      rdoc (~> 3.4)
-      thor (>= 0.14.6, < 2.0)
-    rake (10.0.3)
-    rdoc (3.12)
-      json (~> 1.4)
-    redis (3.0.2)
+    rake (10.0.4)
+    redis (3.0.3)
     redis-namespace (1.2.1)
       redis (~> 3.0.0)
-    rspec (2.12.0)
-      rspec-core (~> 2.12.0)
-      rspec-expectations (~> 2.12.0)
-      rspec-mocks (~> 2.12.0)
-    rspec-core (2.12.2)
-    rspec-expectations (2.12.1)
-      diff-lcs (~> 1.1.3)
-    rspec-mocks (2.12.1)
-    rspec-rails (2.12.0)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+    rspec-rails (2.13.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-      rspec-core (~> 2.12.0)
-      rspec-expectations (~> 2.12.0)
-      rspec-mocks (~> 2.12.0)
-    sass (3.2.4)
-    sass-rails (3.2.5)
-      railties (~> 3.2.0)
-      sass (>= 3.1.10)
-      tilt (~> 1.3)
-    sidekiq (2.6.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    sass (3.2.7)
+    sidekiq (2.9.0)
       celluloid (~> 0.12.0)
-      connection_pool (~> 0.9.2)
+      connection_pool (~> 1.0)
       multi_json (~> 1)
       redis (~> 3)
       redis-namespace
-    slop (3.3.3)
+    slop (3.4.4)
     spork (0.9.2)
-    sprockets (2.2.2)
+    sprockets (2.9.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    thor (0.16.0)
-    tilt (1.3.3)
-    timers (1.0.2)
+    thor (0.18.1)
+    thread_safe (0.1.0)
+      atomic
+    tilt (1.3.7)
+    timers (1.1.0)
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.35)
-    uglifier (1.3.0)
+    tzinfo (0.3.37)
+    uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
 
@@ -183,22 +223,25 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
+  arel!
+  backbone-on-rails
   carrierwave
   carrierwave-mongoid
-  coffee-rails (~> 3.2)
+  coffee-rails!
   decent_exposure
-  evolver!
   fabrication
   guard-rspec
-  haml
+  haml-rails
   jquery-rails
   jruby-openssl
-  kiqstand
-  mongoid (~> 3.1.1)
-  rails (~> 3.2)
+  kiqstand!
+  mimetype-fu
+  mongoid!
+  rack-iframe-transport
+  rails!
   rspec-rails
-  sass-rails (~> 3.2)
+  sass-rails!
   sidekiq
   spork (~> 0.9.0.rc)
+  sprockets-rails!
   uglifier

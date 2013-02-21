@@ -30,9 +30,6 @@ module Echo
       g.template_engine :haml
     end
 
-    # Setup the Mongoid observers here.
-    config.mongoid.observers = :band_observer, :following_observer, :role_observer
-
     # Configure Mongoid to use sidekiq properly with the Kiqstand gem.
     Sidekiq.configure_server do |config|
       config.server_middleware do |chain|
