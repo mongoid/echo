@@ -1,5 +1,9 @@
 # encoding: utf-8
 
+%W(m1 m2 m3).each do |host|
+  Site.create!(host: host, db_name: "#{host}db")
+end
+
 # Create the basic reference roles for the application. These are based off the
 # roles defined in the reference role.
 Reference::Role::TYPES.each do |role|

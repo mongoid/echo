@@ -2,6 +2,16 @@ Echo [![Build Status](https://secure.travis-ci.org/mongoid/echo.png?branch=maste
 ====
 This is the sample Rails application for Mongoid.
 
+Running mongoid/issues/2864
+-----------------------------------
+
+* `$ bundle install`
+* `$ bundle exec rake db:reseed`
+* `$ rails s`
+
+After starting the server you can do multiple requests to: http://0.0.0.0:3000/ and they should return the right dbs.
+
+
 Compatibility
 -------------
 

@@ -12,9 +12,10 @@ gem "haml"
 gem "jquery-rails"
 gem "kiqstand"
 gem "sidekiq"
+gem 'debugger'
 
 gem "evolver", github: "mongoid/evolver"
-gem "mongoid", "~> 3.1.1"
+gem "mongoid"
 
 group :assets do
   gem "sass-rails", "~> 3.2"
