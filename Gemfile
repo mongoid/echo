@@ -9,7 +9,6 @@ gem "decent_exposure"
 
 gem "sidekiq"
 
-#gem "evolver", github: "mongoid/evolver"
 gem "mongoid", github: "mongoid/mongoid"
 gem "kiqstand", github: "mongoid/kiqstand"
 
