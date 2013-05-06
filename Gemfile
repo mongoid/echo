@@ -1,6 +1,4 @@
-source "http://rubygems.org"
-
-ruby "1.9.3"
+source "https://rubygems.org"
 
 gem "rails", "~> 3.2"
 
@@ -14,7 +12,7 @@ gem "kiqstand"
 gem "sidekiq"
 
 gem "evolver", github: "mongoid/evolver"
-gem "mongoid", "~> 3.1.1"
+gem "mongoid", "~> 3.1.3"
 
 group :assets do
   gem "sass-rails", "~> 3.2"
