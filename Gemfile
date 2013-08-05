@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem 'rails',     github: 'rails/rails'
-gem 'arel',      github: 'rails/arel'
+gem 'rails', "~> 4.0.0"
+gem 'arel',  "~> 4.0.0"
 
 gem "carrierwave"
 gem "carrierwave-mongoid", require: "carrierwave/mongoid"
@@ -21,9 +21,9 @@ gem 'rack-iframe-transport'
 gem 'mimetype-fu', require: 'mimetype_fu'
 gem 'haml-rails'
 group :assets do
-  gem 'sprockets-rails', github: 'rails/sprockets-rails'
-  gem 'sass-rails',   github: 'rails/sass-rails'
-  gem 'coffee-rails', github: 'rails/coffee-rails'
+  gem 'sprockets-rails'
+  gem 'sass-rails', "~> 4.0.0"
+  gem 'coffee-rails', "~> 4.0.0"
   gem "uglifier"
 end
 
