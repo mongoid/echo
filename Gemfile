@@ -12,7 +12,7 @@ gem "kiqstand"
 gem "sidekiq"
 
 gem "evolver", github: "mongoid/evolver"
-gem "mongoid", "~> 3.1.3"
+gem "mongoid", "~> 3.1.4"
 
 group :assets do
   gem "sass-rails", "~> 3.2"
