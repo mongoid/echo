@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 263a09e01dc7115083147721283438c2f6a77e91
+  revision: b357f8c69a422e9e611c78850ec54503bd218b02
+  branch: eager_load
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0)
