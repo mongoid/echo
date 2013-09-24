@@ -10,7 +10,7 @@ gem "decent_exposure"
 gem "sidekiq"
 
 gem "mongoid", github: "mongoid/mongoid"
-gem "kiqstand", github: "mongoid/kiqstand"
+#gem "kiqstand", github: "mongoid/kiqstand"
 
 #
 # Front-End Infrastructure
