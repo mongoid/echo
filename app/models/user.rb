@@ -8,8 +8,9 @@ class User
   field :handle, type: String
   field :last_name, type: String
 
-  belongs_to :band
+  belongs_to :band, inverse_of: :members
   has_many :followings, validate: false
+  has_one :cat, class_name: "Pet", autosave: true
 
   embeds_one :role, validate: false
   embeds_one :settings, class_name: "Settings", validate: false

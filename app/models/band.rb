@@ -14,7 +14,7 @@ class Band
 
   has_many :accesses, validate: false
   has_many :followings, validate: false
-  has_many :members, class_name: "User", validate: false
+  has_many :members, class_name: "User", validate: false, inverse_of: :band
 
   embeds_many :albums, validate: false
   embeds_many :photos, as: :photographic, validate: false
