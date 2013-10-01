@@ -1,12 +1,21 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 263a09e01dc7115083147721283438c2f6a77e91
+  revision: 1da185e4096bfa99e5bcb96f13632ec57113beac
+  branch: eager_load
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0)
       moped (~> 2.0.beta)
       origin (~> 1.0)
       tzinfo (~> 0.3.37)
+
+GIT
+  remote: git://github.com/mongoid/moped.git
+  revision: 90f3b2e465d9f37a866d4b840dba407670d9d030
+  specs:
+    moped (2.0.0.beta)
+      bson (~> 2.0.0.rc2)
+      optionable (~> 0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -106,9 +115,6 @@ GEM
     mime-types (1.23)
     mimetype-fu (0.1.2)
     minitest (4.7.5)
-    moped (2.0.0.beta)
-      bson (~> 2.0.0.rc2)
-      optionable (~> 0.1.1)
     multi_json (1.8.0)
     optionable (0.1.1)
     origin (1.1.0)
@@ -205,6 +211,7 @@ DEPENDENCIES
   jruby-openssl
   mimetype-fu
   mongoid!
+  moped!
   rack-iframe-transport
   rails (~> 4.0.0)
   rspec-rails

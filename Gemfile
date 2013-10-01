@@ -9,7 +9,8 @@ gem "decent_exposure"
 
 gem "sidekiq"
 
-gem "mongoid", github: "mongoid/mongoid"
+gem "moped", github: "mongoid/moped"
+gem "mongoid", github: "mongoid/mongoid", branch: "eager_load"
 #gem "kiqstand", github: "mongoid/kiqstand"
 
 #
