@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 60a46908c248572c24a062e8a482be13c6d4bff9
+  revision: 867a194afdc8f1c2cfcde8336732d908b3723076
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0)
@@ -109,7 +109,7 @@ GEM
     moped (2.0.0.beta3)
       bson (~> 2.0.0.rc3)
       optionable (~> 0.1.1)
-    multi_json (1.8.1)
+    multi_json (1.8.2)
     optionable (0.1.1)
     origin (1.1.0)
     polyglot (0.3.3)
