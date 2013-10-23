@@ -11,11 +11,12 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 module Echo
   class Application < Rails::Application
 
+
     # Enable the asset pipeline.
     config.assets.enabled = true
 
     # Add additional load paths for your own custom dirs.
-    config.autoload_paths += %W(#{config.root}/app/services)
+    config.autoload_paths += %W(#{config.root}/app/services lib)
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -29,6 +30,8 @@ module Echo
       g.test_framework  :rspec
       g.template_engine :haml
     end
+
+    config.middleware.use 'MongoidConnectionMiddleware'
 
     # Configure Mongoid to use sidekiq properly with the Kiqstand gem.
     Sidekiq.configure_server do |config|
