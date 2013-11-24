@@ -14,11 +14,11 @@ describe Message do
     end
 
     it "has fk on report same as pk on message" do
-      report.message_id.should eq(message.message_id)
+      report.message_report_id.should eq(message.message_id)
     end
 
     it "does not use _id on message fk" do
-      report.message_id.should_not eq(message.id)
+      report.message_report_id.should_not eq(message.id)
     end
   end
 
