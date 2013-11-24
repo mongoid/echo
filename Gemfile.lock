@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 5f1125f20ffa076cbc8668641753fcc080932c6d
+  revision: d35eaab4460540d3016baac9b40e5ebb0ed18b44
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0)
@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/mongoid/moped.git
-  revision: a87255b0dd17558e35f39f1948d28f524ab63a88
+  revision: 073e30bbc49f10d71a1ff3c8462f779f457e28f0
   specs:
     moped (2.0.0.beta3)
       bson (~> 2.0.0.rc3)
