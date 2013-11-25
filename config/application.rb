@@ -30,14 +30,5 @@ module Echo
       g.test_framework  :rspec
       g.template_engine :haml
     end
-
-    config.middleware.use 'MongoidConnectionMiddleware'
-
-    # Configure Mongoid to use sidekiq properly with the Kiqstand gem.
-    Sidekiq.configure_server do |config|
-      config.server_middleware do |chain|
-        chain.add Kiqstand::Middleware
-      end
-    end
   end
 end
