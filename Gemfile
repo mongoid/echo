@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
-gem 'rails', "~> 4.0.0"
-gem 'arel',  "~> 4.0.0"
+gem 'rails', "~> 4.0.2"
 
 gem "carrierwave"
 gem "carrierwave-mongoid", require: "carrierwave/mongoid"
@@ -12,20 +11,7 @@ gem "sidekiq"
 gem "moped", github: "mongoid/moped"
 gem "mongoid", github: "mongoid/mongoid"
 
-#
-# Front-End Infrastructure
-#
-gem 'backbone-on-rails'
-gem 'jquery-rails'
-gem 'rack-iframe-transport'
 gem 'mimetype-fu', require: 'mimetype_fu'
-gem 'haml-rails'
-group :assets do
-  gem 'sprockets-rails'
-  gem 'sass-rails', "~> 4.0.0"
-  gem 'coffee-rails', "~> 4.0.0"
-  gem "uglifier"
-end
 
 group :development, :test do
   gem "fabrication"
