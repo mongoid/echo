@@ -272,7 +272,7 @@ describe User do
       end
 
       it "returns true" do
-        subscribe.should be_true
+        subscribe.should be true
       end
     end
   end

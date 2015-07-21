@@ -22,10 +22,10 @@ development:
         #   mode: :secondary_preferred
 
         # The name of the user for authentication.
-        # user: 'user'
+        user: echo-user
 
         # The password of the user for authentication.
-        # password: 'password'
+        password: password
 
         # The user's database roles.
         # roles:
@@ -37,7 +37,7 @@ development:
         # auth_mech: :scram
 
         # The database or source to authenticate the user against. (default: admin)
-        # auth_source: admin
+        auth_source: admin
 
         # Force a the driver cluster to behave in a certain manner instead of auto-
         # discovering. Can be one of: :direct, :replica_set, :sharded. Set to :direct
@@ -108,7 +108,7 @@ development:
 
     # Preload all models in development, needed when models use
     # inheritance. (default: false)
-    # preload_models: false
+    preload_models: true
 
     # Raise an error when performing a #find and the document is not found.
     # (default: true)
@@ -131,5 +131,8 @@ test:
         - localhost:27017
       options:
         read:
-          mode: primary
+          mode: :primary
         max_pool_size: 1
+        user: echo-user
+        password: password
+        auth_source: admin

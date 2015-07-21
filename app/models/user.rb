@@ -69,7 +69,7 @@ class User
     #   User.subscribers
     #
     # @return [ Array<User> ] The matching users.
-    scope "#{name}s", where("role.name" => name.to_s)
+    scope "#{name}s", ->{ where("role.name" => name.to_s) }
   end
 
   # Does the user have the ability to perform the supplied action?

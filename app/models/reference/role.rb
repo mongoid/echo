@@ -34,7 +34,7 @@ module Reference
       #   Reference::Role.visitors
       #
       # @return [ Array<Reference::Role> ] The matching roles.
-      scope "#{name}s", where(name: name)
+      scope "#{name}s", ->{ where(name: name) }
 
       # Since there is only one of each role, this provides a convenience for
       # getting the only role for the provided name.
